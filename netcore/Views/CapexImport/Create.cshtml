@@ -1,0 +1,189 @@
+﻿@model MulltiplaJML.Models.RM.CapexImport
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>CapexImport</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ContaContabil" class="control-label"></label>
+                <input asp-for="ContaContabil" class="form-control" />
+                <span asp-validation-for="ContaContabil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coligada" class="control-label"></label>
+                <input asp-for="Coligada" class="form-control" />
+                <span asp-validation-for="Coligada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContaGerencial" class="control-label"></label>
+                <input asp-for="ContaGerencial" class="form-control" />
+                <span asp-validation-for="ContaGerencial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColigadaGerencial" class="control-label"></label>
+                <input asp-for="ColigadaGerencial" class="form-control" />
+                <span asp-validation-for="ColigadaGerencial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Filial" class="control-label"></label>
+                <input asp-for="Filial" class="form-control" />
+                <span asp-validation-for="Filial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CentroCusto" class="control-label"></label>
+                <input asp-for="CentroCusto" class="form-control" />
+                <span asp-validation-for="CentroCusto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Departamento" class="control-label"></label>
+                <input asp-for="Departamento" class="form-control" />
+                <span asp-validation-for="Departamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ano" class="control-label"></label>
+                <input asp-for="Ano" class="form-control" />
+                <span asp-validation-for="Ano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes1" class="control-label"></label>
+                <input asp-for="ValorMes1" class="form-control" />
+                <span asp-validation-for="ValorMes1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes2" class="control-label"></label>
+                <input asp-for="ValorMes2" class="form-control" />
+                <span asp-validation-for="ValorMes2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes3" class="control-label"></label>
+                <input asp-for="ValorMes3" class="form-control" />
+                <span asp-validation-for="ValorMes3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes4" class="control-label"></label>
+                <input asp-for="ValorMes4" class="form-control" />
+                <span asp-validation-for="ValorMes4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes5" class="control-label"></label>
+                <input asp-for="ValorMes5" class="form-control" />
+                <span asp-validation-for="ValorMes5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes6" class="control-label"></label>
+                <input asp-for="ValorMes6" class="form-control" />
+                <span asp-validation-for="ValorMes6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes7" class="control-label"></label>
+                <input asp-for="ValorMes7" class="form-control" />
+                <span asp-validation-for="ValorMes7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes8" class="control-label"></label>
+                <input asp-for="ValorMes8" class="form-control" />
+                <span asp-validation-for="ValorMes8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes9" class="control-label"></label>
+                <input asp-for="ValorMes9" class="form-control" />
+                <span asp-validation-for="ValorMes9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes10" class="control-label"></label>
+                <input asp-for="ValorMes10" class="form-control" />
+                <span asp-validation-for="ValorMes10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes11" class="control-label"></label>
+                <input asp-for="ValorMes11" class="form-control" />
+                <span asp-validation-for="ValorMes11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMes12" class="control-label"></label>
+                <input asp-for="ValorMes12" class="form-control" />
+                <span asp-validation-for="ValorMes12" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes1" class="control-label"></label>
+                <input asp-for="Valor2Mes1" class="form-control" />
+                <span asp-validation-for="Valor2Mes1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes2" class="control-label"></label>
+                <input asp-for="Valor2Mes2" class="form-control" />
+                <span asp-validation-for="Valor2Mes2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes3" class="control-label"></label>
+                <input asp-for="Valor2Mes3" class="form-control" />
+                <span asp-validation-for="Valor2Mes3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes4" class="control-label"></label>
+                <input asp-for="Valor2Mes4" class="form-control" />
+                <span asp-validation-for="Valor2Mes4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes5" class="control-label"></label>
+                <input asp-for="Valor2Mes5" class="form-control" />
+                <span asp-validation-for="Valor2Mes5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes6" class="control-label"></label>
+                <input asp-for="Valor2Mes6" class="form-control" />
+                <span asp-validation-for="Valor2Mes6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes7" class="control-label"></label>
+                <input asp-for="Valor2Mes7" class="form-control" />
+                <span asp-validation-for="Valor2Mes7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes8" class="control-label"></label>
+                <input asp-for="Valor2Mes8" class="form-control" />
+                <span asp-validation-for="Valor2Mes8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes9" class="control-label"></label>
+                <input asp-for="Valor2Mes9" class="form-control" />
+                <span asp-validation-for="Valor2Mes9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes10" class="control-label"></label>
+                <input asp-for="Valor2Mes10" class="form-control" />
+                <span asp-validation-for="Valor2Mes10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes11" class="control-label"></label>
+                <input asp-for="Valor2Mes11" class="form-control" />
+                <span asp-validation-for="Valor2Mes11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor2Mes12" class="control-label"></label>
+                <input asp-for="Valor2Mes12" class="form-control" />
+                <span asp-validation-for="Valor2Mes12" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

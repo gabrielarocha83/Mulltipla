@@ -1,0 +1,132 @@
+﻿@model IEnumerable<MulltiplaJML.Models.XML.GDXMLHEADER>
+
+@{
+    ViewData["Title"] = "Doc. Fiscais - Principal";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+    ViewData["EntityIcon"] = "fa fa-bank";
+    ViewData["ListTitle"] = "Lista de Notas Recebidas";
+    //ViewData["IndexInfo"] = "O cliente é uma organização que compra produtos da sua empresa. Você vende produtos para eles.";
+}
+<div class="row">
+    <div class="col-md-12">
+        <form>
+            <div class="form-group col-md-12">
+                @*<input type="submit" value="Salvar" class="btn btn-primary" onclick="Integrar()" />*@
+                </div>
+                <table class="table table-hover table-stripeds">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Arquivo</th>
+                            <th>
+                                Chave
+                            </th>
+
+                            @*<th>
+                            Série
+                        </th>*@
+                            <th>
+                                Nº Nota
+                            </th>
+                            <th>
+                                Dt. Emissão
+                            </th>
+
+                            <th>
+                                Emitente
+                            </th>
+                            <th>
+                                Destinatario
+                            </th>
+
+
+                            <th>
+                                Valor Total
+                            </th>
+
+                            @*<th>
+                            Info.
+                        </th>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                                <td>
+                                    @*<a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |*@
+                                    <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                                    @*<a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
+                                </td>
+
+                                <td>@Html.ActionLink("Download", "Download", new { id = item.CHAVE })</td>
+                                <td>
+                                    @*<input value="@item.CHAVE" type="checkbox" />*@
+                                    <label asp-for="@item.CHAVE" class="chave" title="@item.CHAVE">@item.CHAVE</label>
+
+                                </td>
+                               
+
+
+                                @*<td>
+                                @Html.DisplayFor(modelItem => item.SERIE)
+                            </td>*@
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NNF)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DEMI)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NomeRemetente)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NomeDestinatario)
+                                </td>
+
+
+
+
+                                <td>
+                                    R$ @Html.DisplayFor(modelItem => item.VNF)
+                                </td>
+                                @*<td>
+                                @Html.DisplayFor(modelItem => item.INFCPL)
+                            </td>*@
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+        </form>
+        </div></div>
+        <script>
+            function Integrar() {
+
+                var pedido = document.getElementsByClassName('pedido')
+                var chave = document.getElementsByClassName('chave')
+                for (index in pedido) {
+                    var _pedido = pedido[index].value;
+                    var _chave = chave[index].title;
+                    AlterarPedido(_pedido, _chave);
+                }
+                window.location.href = '/DocumentosFiscais/Index/'
+            }
+            function AlterarPedido(pedido, chave) {
+
+                $.ajax({
+                    url: '/DocumentosFiscais/AlterarNota',
+                    dataType: 'json',
+                    type: 'POST',
+                    data: { 'Pedido': pedido, 'Chave': chave },
+
+                });
+
+            }
+
+        </script>

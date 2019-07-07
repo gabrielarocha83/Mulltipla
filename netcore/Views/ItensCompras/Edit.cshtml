@@ -1,0 +1,70 @@
+﻿@model MulltiplaJML.Models.ItensCompra
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>ItensCompra</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="IdCompras" class="control-label"></label>
+                <input asp-for="IdCompras" class="form-control" />
+                <span asp-validation-for="IdCompras" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeMedida" class="control-label"></label>
+                <input asp-for="UnidadeMedida" class="form-control" />
+                <span asp-validation-for="UnidadeMedida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodProduto" class="control-label"></label>
+                <input asp-for="CodProduto" class="form-control" />
+                <span asp-validation-for="CodProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto" class="control-label"></label>
+                <input asp-for="Produto" class="form-control" />
+                <span asp-validation-for="Produto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorUnitario" class="control-label"></label>
+                <input asp-for="ValorUnitario" class="form-control" />
+                <span asp-validation-for="ValorUnitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorTotal" class="control-label"></label>
+                <input asp-for="ValorTotal" class="form-control" />
+                <span asp-validation-for="ValorTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EspecificaçãoTecnica" class="control-label"></label>
+                <input asp-for="EspecificaçãoTecnica" class="form-control" />
+                <span asp-validation-for="EspecificaçãoTecnica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

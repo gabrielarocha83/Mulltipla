@@ -1,0 +1,101 @@
+﻿@model IEnumerable<MulltiplaJML.Models.Pagamento>
+
+@{
+    ViewData["Title"] = "Pagamentos";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+
+<div class="col-xs-12">
+    <header class="panel_header">
+        <h2 class="title pull-left">Pagamentos</h2>
+        <div class="actions panel_actions pull-right">
+            <a class="box_toggle fa fa-chevron-down"></a>
+            <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+            <a class="box_close fa fa-times"></a>
+        </div>
+    </header>
+</div>
+<div class="col-xs-12">
+    <br />
+    <div class="row">
+        <div class="col-lg-3 col-xs-3">
+            <a asp-action="Create" class="btn btn-success">Novo Pagamento</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        Tipo Solicitação
+                    </th>
+                    <th>
+                        Vencimento
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fornecedor)
+                    </th>
+
+                    <th>
+                        Pedido
+                    </th>
+                    <th>
+                        Nº Nota
+                    </th>
+                    <th>
+                        Emissão
+                    </th>
+                    <th>
+                        Valor Total
+                    </th>
+                    <th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipodeSolicitacao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Vencimento)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fornecedor)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumLotePedido)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumNF)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmissaoNF)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValorTotal)
+                        </td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+   

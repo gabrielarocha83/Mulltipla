@@ -1,0 +1,177 @@
+﻿@model MulltiplaJML.Models.Invent.OrdemServico
+
+@{
+    ViewData["Title"] = "Editar OS";
+    Layout = "~/Views/Shared/_AdminlteNetcoreEdit.cshtml";
+    ViewData["EntityIcon"] = "fa fa-building";
+    ViewData["ListTitle"] = "Ordem de Serviço";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group col-md-4">
+                <label asp-for="ChaveNF" class="control-label"></label>
+                <input asp-for="ChaveNF" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-2">
+                <label asp-for="NumeroOS" class="control-label"></label>
+                <input asp-for="NumeroOS" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-2">
+                <label asp-for="NumeroPedido" class="control-label"></label>
+                <input asp-for="NumeroPedido" class="form-control" disabled />
+            </div>
+
+            <div class="form-group col-md-2">
+                <label asp-for="DataRecebimento" class="control-label"></label>
+                <input asp-for="DataRecebimento" class="form-control" />
+                <span asp-validation-for="DataRecebimento" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label asp-for="DataOS" class="control-label"></label>
+                <input asp-for="DataOS" class="form-control" />
+                <span asp-validation-for="DataOS" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label asp-for="CNPJFornecedor" class="control-label"></label>
+                <input asp-for="CNPJFornecedor" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="NomeFornecedor" class="control-label"></label>
+                <input asp-for="NomeFornecedor" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-2">
+                <label asp-for="CNPJmatriz" class="control-label"></label>
+                <input asp-for="CNPJmatriz" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="RazaoSocialMatriz" class="control-label"></label>
+                <input asp-for="RazaoSocialMatriz" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-2">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control seslect2" asp-items="@ViewBag.Status" disabled></select>
+            </div>
+
+            @*<div class="form-group col-md-2">
+                <label asp-for="TipoRecebimento" class="control-label"></label>
+                <select asp-for="TipoRecebimento" class="form-control seslect2" asp-items="Html.GetEnumSelectList<MulltiplaJML.Models.Invent.TipoRecebimento>()"></select>
+                <span asp-validation-for="TipoRecebimento" class="text-danger"></span>
+            </div>*@
+            <div class="form-group col-md-2">
+                <label asp-for="ValorTotal" class="control-label"></label>
+                <input asp-for="ValorTotal" class="form-control" disabled />
+                <span asp-validation-for="ValorTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Cod Produto
+                    </th>
+                    <th>
+                        Descricao
+                    </th>
+
+                    <th>
+                        Quantidade
+                    </th>
+                    <th>
+                        Qtd. Recebida
+                    </th>
+                    @*<th>
+                        Recebido
+                    </th>*@
+                    <th>
+                        Tipo Recebimento
+                    </th>
+                    <th>
+                        Unidade
+                    </th>
+                    <th>
+                        Valor
+                    </th>
+                    <th>
+                        Valor Total
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.itensOrdemServicos.ToList())
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CodProduto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Qtd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QtdRecebida)
+                    </td>
+                    @*<td>
+                        @if (item.Recebido == 0)
+                        {
+                            <span class="label label-warning">Não</span>
+
+                        }
+                        @if (item.Recebido == 1)
+                        {
+                            <span class="label label-success">Sim</span>
+                        }
+                    </td>*@
+                    <td>
+                        @if (item.TipoRecebimento == 0)
+                        {
+                            <span class="label label-warning">Sem Recebimento</span>
+
+                        }
+                        @if (item.TipoRecebimento == 1)
+                        {
+                            <span class="label label-success">Rec. Total</span>
+                        }
+                        @if (item.TipoRecebimento == 2)
+                        {
+                            <span class="label label-success">Rec. Parcial</span>
+                        }
+                    </td>
+                    @*<td>
+           @Html.DisplayFor(modelItem => item.CodFornecedor)
+        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Unidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Valor)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorTotal)
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    </div>

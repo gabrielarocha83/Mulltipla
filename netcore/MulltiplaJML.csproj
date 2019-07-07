@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <AssemblyName>MulltiplaJML</AssemblyName>
+    <RootNamespace>MulltiplaJML</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Sankhya\**" />
+    <Compile Remove="Views\Notas\**" />
+    <Content Remove="Models\Sankhya\**" />
+    <Content Remove="Views\Notas\**" />
+    <EmbeddedResource Remove="Models\Sankhya\**" />
+    <EmbeddedResource Remove="Views\Notas\**" />
+    <None Remove="Models\Sankhya\**" />
+    <None Remove="Views\Notas\**" />
+    <Content Remove="Views\Warehouse %28copiar%29\Delete.cshtml" />
+    <Content Remove="Views\Warehouse %28copiar%29\Details.cshtml" />
+    <Content Remove="Views\NotasXml\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Invent\NotasController.cs" />
+    <Compile Remove="Data\ErpDbContext.cs" />
+    <Compile Remove="Views\NotasController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.Translation.V2" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+    <PackageReference Include="Sendgrid" Version="9.10.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Drawing">
+      <HintPath>bin\System.Drawing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+</Project>

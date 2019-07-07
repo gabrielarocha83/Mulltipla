@@ -1,0 +1,210 @@
+﻿@model IEnumerable<MulltiplaJML.Models.XML.GDXMLITENS>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminlteMulltiplaJML.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CHNFE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VERAPLIC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPROD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.XPROD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NCM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CFOP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UCOM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QCOM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VUNCOM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VPROD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEANTRIB)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UTRIB)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QTRIB)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VUNTRIB)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.INDTOT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEAN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ICMS_ORI)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ICMS_CST)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ICMS_VBCSTRET)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ICMS_VICMSSTRETI)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IPI_CENQ)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IPI_CST)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PIS_CST)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PIS_VBC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PIS_PPIS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PIS_VPIS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.COFINS_CST)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.COFINS_VBC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.COFINS_PCOFINS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.COFINS_VCOFINS)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CHNFE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VERAPLIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPROD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.XPROD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NCM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CFOP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UCOM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QCOM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VUNCOM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VPROD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEANTRIB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UTRIB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QTRIB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VUNTRIB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.INDTOT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEAN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ICMS_ORI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ICMS_CST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ICMS_VBCSTRET)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ICMS_VICMSSTRETI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPI_CENQ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPI_CST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PIS_CST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PIS_VBC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PIS_PPIS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PIS_VPIS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COFINS_CST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COFINS_VBC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COFINS_PCOFINS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COFINS_VCOFINS)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,111 @@
+﻿@model MulltiplaJML.Models.DFe.ResNFe
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminlteMulltiplaJML.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>ResNFe</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ChNFe" class="control-label"></label>
+                <input asp-for="ChNFe" class="form-control" />
+                <span asp-validation-for="ChNFe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label"></label>
+                <input asp-for="CNPJ" class="form-control" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="XNome" class="control-label"></label>
+                <input asp-for="XNome" class="form-control" />
+                <span asp-validation-for="XNome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IE" class="control-label"></label>
+                <input asp-for="IE" class="form-control" />
+                <span asp-validation-for="IE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DhEmi" class="control-label"></label>
+                <input asp-for="DhEmi" class="form-control" />
+                <span asp-validation-for="DhEmi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TpNF" class="control-label"></label>
+                <input asp-for="TpNF" class="form-control" />
+                <span asp-validation-for="TpNF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VNF" class="control-label"></label>
+                <input asp-for="VNF" class="form-control" />
+                <span asp-validation-for="VNF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DigVal" class="control-label"></label>
+                <input asp-for="DigVal" class="form-control" />
+                <span asp-validation-for="DigVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DhRecbTo" class="control-label"></label>
+                <input asp-for="DhRecbTo" class="form-control" />
+                <span asp-validation-for="DhRecbTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NProt" class="control-label"></label>
+                <input asp-for="NProt" class="form-control" />
+                <span asp-validation-for="NProt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CSitNFe" class="control-label"></label>
+                <input asp-for="CSitNFe" class="form-control" />
+                <span asp-validation-for="CSitNFe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CnpjTomador" class="control-label"></label>
+                <input asp-for="CnpjTomador" class="form-control" />
+                <span asp-validation-for="CnpjTomador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manifesta" class="control-label"></label>
+                <input asp-for="Manifesta" class="form-control" />
+                <span asp-validation-for="Manifesta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataManifestacao" class="control-label"></label>
+                <input asp-for="DataManifestacao" class="form-control" />
+                <span asp-validation-for="DataManifestacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NSU" class="control-label"></label>
+                <input asp-for="NSU" class="form-control" />
+                <span asp-validation-for="NSU" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="createdAt" class="control-label"></label>
+                <input asp-for="createdAt" class="form-control" />
+                <span asp-validation-for="createdAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,69 @@
+﻿@model MulltiplaJML.Models.AccountViewModels.Usuarios
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminlteNetcoreEdit.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group col-md-3">
+                <label asp-for="Login" class="control-label"></label>
+                <input asp-for="Login" class="form-control" />
+                <span asp-validation-for="Login" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="CodMatriz" class="control-label"></label>
+                <select asp-for="CodMatriz" class="form-control">
+                    <option value="1">COBRANCA</option>
+                    <option value="2">PROMOTORA</option>
+                    <option value="11">VALORATI</option>
+                </select>
+                <span asp-validation-for="CodMatriz" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="CodFilial" class="control-label"></label>
+                <select asp-for="CodFilial" class="form-control">
+                    <option value="1">INTERVALOR COBRANCA MATRIZ</option>
+                            <option value="2"> INTERVALOR COBRANCA FILIAL ALPHAVILLE</option>
+                            <option value="3"> INTERVALOR COBRANCA FILIAL RIO DE JANEIRO</option>
+                            <option value="4"> INTERVALOR COBRANCA FILIAL BELO HORIZONTE</option>
+                            <option value="5"> INTERVALOR COBRANCA FILIAL SALVADOR</option>
+                            <option value="6"> INTERVALOR COBRANCA FILIAL CURITIBA</option>
+                            <option value="7"> INTERVALOR COBRANCA FILIAL LAPA</option>
+                           <option value="8"> INTERVALOR COBRANCA FILIAL BRASILIA</option>
+                            <option value="9"> INTERVALOR COBRANCA FILIAL CAMPINAS</option>
+                            <option value="10"> INTERVALOR COBRANCA FILIAL RECIFE</option>
+                           <option value="11"> INTERVALOR COBRANCA FILIAL MANAUS</option>
+                          <option value="12"> INTERVALOR COBRANÇA FILIAL IPATINGA</option>
+                          <option value="13"> INTERVALOR COBRANÇA FILIAL GOIANIA</option>
+                          <option value="14"> INTERVALOR COBRANÇA FILIAL ARARAQUARA</option>
+                          <option value="15"> INTERVALOR COBRANÇA FILIAL LAPA II</option>
+                          <option value="16"> INTERVALOR COBRANÇA FILIAL LAPA III</option>
+                          <option value="17"> INTERVALOR COBRANÇA - FILIAL OSASCO</option>
+                          <option value="18"> FILIAL LAPA IV - SP</option>
+                          <option value="19"> FILIAL LAPA V - SP</option>
+                           <option value="20"> FILIAL LAPA XX - SP</option>
+                </select>
+                <span asp-validation-for="CodFilial" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3" hidden="hidden">
+                <label asp-for="Ativo" class="control-label"></label>
+                <input asp-for="Ativo" class="form-control"  value="1"/>
+                <span asp-validation-for="Ativo" class="text-danger"></span>
+            </div>
+           
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

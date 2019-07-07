@@ -1,0 +1,189 @@
+﻿@model MulltiplaJML.Models.Pagamento
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+<div class="col-xs-12">
+    <section class="box ">
+        <header class="panel_header">
+            <h2 class="title pull-left">Pagamento</h2>
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+        <div class="content-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group col-md-3">
+                            <label asp-for="TipodeSolicitacao" class="control-label"></label>
+                            <select asp-for="TipodeSolicitacao" class="form-control seslect2 status">
+                                <option value="1">Provisão </option>
+                                <option value="2">Pagamento</option>
+                            </select>
+                            <span asp-validation-for="TipodeSolicitacao" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="Vencimento" class="control-label"></label>
+                            <input asp-for="Vencimento" class="form-control" />
+                            <span asp-validation-for="Vencimento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="TipodeMovimentação" class="control-label">Tipo de Movimentação</label>
+                            <select asp-for="TipodeMovimentação" class="form-control seslect2 ">
+                                <option value="1">NF Compra (Produto)</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="FormadePagto" class="control-label">Forma Pagto</label>
+                            <select asp-for="TipodeMovimentação" class="form-control seslect2 ">
+                                <option value="1">Deposito</option>
+                                <option value="2">Boleto</option>
+                                <option value="3">Cheque</option>
+                                <option value="4">PagFor</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Fornecedor" class="control-label"></label>
+                            <input asp-for="Fornecedor" class="form-control" />
+                            <span asp-validation-for="Fornecedor" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="CPFCNPJ" class="control-label"></label>
+                            <input asp-for="CPFCNPJ" class="form-control" />
+                            <span asp-validation-for="CPFCNPJ" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="CondicaodePgto" class="control-label">Condição de Pagamento</label>
+                            <select asp-for="CondicaodePgto" class="form-control seslect2 ">
+                                <option value="1">A vista</option>
+                                <option value="2">Parcelado</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="QtdeParc" class="control-label">Qtd Parcelas</label>
+                            <input asp-for="QtdeParc" class="form-control" />
+                            <span asp-validation-for="QtdeParc" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="NumLotePedido" class="control-label">N º Do Lote / Pedido</label>
+                            <input asp-for="NumLotePedido" class="form-control" />
+                            <span asp-validation-for="NumLotePedido" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="NumNF" class="control-label">Nº Nota Fiscal</label>
+                            <input asp-for="NumNF" class="form-control" />
+                            <span asp-validation-for="NumNF" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="EmissaoNF" class="control-label">Emissão da Nota</label>
+                            <input asp-for="EmissaoNF" class="form-control" />
+                            <span asp-validation-for="EmissaoNF" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="ValorTotal" class="control-label">Valor Total</label>
+                            <input asp-for="ValorTotal" class="form-control" />
+                            <span asp-validation-for="ValorTotal" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="ContaContabil" class="control-label">Conta Contábil</label>
+                            <input asp-for="ContaContabil" class="form-control" />
+                            <span asp-validation-for="ContaContabil" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Empresa" class="control-label"></label>
+                            <input asp-for="Empresa" class="form-control" />
+                            <span asp-validation-for="Empresa" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Reembolsável" class="control-label"></label>
+                            <input asp-for="Reembolsável" class="form-control" />
+                            <span asp-validation-for="Reembolsável" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Cliente" class="control-label"></label>
+                            <input asp-for="Cliente" class="form-control" />
+                            <span asp-validation-for="Cliente" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <label asp-for="AtivaçãoBem" class="control-label"></label>
+                            <select asp-for="AtivaçãoBem" class="form-control seslect2 ">
+                                <option value="1">Sim</option>
+                                <option value="2">Não</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="DescriçãoPagto" class="control-label">Descrição Pagamento</label>
+                            <input asp-for="DescriçãoPagto" class="form-control" />
+                            <span asp-validation-for="DescriçãoPagto" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="NPatrimônio" class="control-label">Nº Patrimônio</label>
+                            <input asp-for="NPatrimônio" class="form-control" />
+                            <span asp-validation-for="NPatrimônio" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="NSérie" class="control-label"></label>
+                            <input asp-for="NSérie" class="form-control" />
+                            <span asp-validation-for="NSérie" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="Qtde" class="control-label"></label>
+                            <input asp-for="Qtde" class="form-control" />
+                            <span asp-validation-for="Qtde" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="ValorUnitario" class="control-label">Valor Unitário</label>
+                            <input asp-for="ValorUnitario" class="form-control" />
+                            <span asp-validation-for="ValorUnitario" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="AprovadoGestor" class="control-label">Gestor</label>
+                            <input asp-for="AprovadoGestor" class="form-control" />
+                            <span asp-validation-for="AprovadoGestor" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label asp-for="MotivoAprovGestor" class="control-label">Motivo</label>
+                            <input asp-for="MotivoAprovGestor" class="form-control" />
+                            <span asp-validation-for="MotivoAprovGestor" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="AprovadoDiretor" class="control-label">Diretor</label>
+                            <input asp-for="AprovadoDiretor" class="form-control" />
+                            <span asp-validation-for="AprovadoDiretor" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label asp-for="MotivoAprovDiretor" class="control-label">Motivo</label>
+                            <input asp-for="MotivoAprovDiretor" class="form-control" />
+                            <span asp-validation-for="MotivoAprovDiretor" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="AprovadoPresidente" class="control-label">Presidente</label>
+                            <input asp-for="AprovadoPresidente" class="form-control" />
+                            <span asp-validation-for="AprovadoPresidente" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label asp-for="MotivoAprovPresidente" class="control-label">Motivo</label>
+                            <input asp-for="MotivoAprovPresidente" class="form-control" />
+                            <span asp-validation-for="MotivoAprovPresidente" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="submit" value="Salvar" class="btn btn-primary" />
+                            <a asp-action="Index" class="btn btn-success">Voltar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+</div></section></div>
+
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }

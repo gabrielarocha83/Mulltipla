@@ -1,0 +1,81 @@
+﻿@model MulltiplaJML.Models.Invent.OrdemServico
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminlteNetcore.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>OrdemServico</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NumeroOS" class="control-label"></label>
+                <input asp-for="NumeroOS" class="form-control" />
+                <span asp-validation-for="NumeroOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroPedido" class="control-label"></label>
+                <input asp-for="NumeroPedido" class="form-control" />
+                <span asp-validation-for="NumeroPedido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChaveNF" class="control-label"></label>
+                <input asp-for="ChaveNF" class="form-control" />
+                <span asp-validation-for="ChaveNF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataRecebimento" class="control-label"></label>
+                <input asp-for="DataRecebimento" class="form-control" />
+                <span asp-validation-for="DataRecebimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataOS" class="control-label"></label>
+                <input asp-for="DataOS" class="form-control" />
+                <span asp-validation-for="DataOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CodFornecedor" class="control-label"></label>
+                <input asp-for="CodFornecedor" class="form-control" />
+                <span asp-validation-for="CodFornecedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeFornecedor" class="control-label"></label>
+                <input asp-for="NomeFornecedor" class="form-control" />
+                <span asp-validation-for="NomeFornecedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoRecebimento" class="control-label"></label>
+                <input asp-for="TipoRecebimento" class="form-control" />
+                <span asp-validation-for="TipoRecebimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorTotal" class="control-label"></label>
+                <input asp-for="ValorTotal" class="form-control" />
+                <span asp-validation-for="ValorTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

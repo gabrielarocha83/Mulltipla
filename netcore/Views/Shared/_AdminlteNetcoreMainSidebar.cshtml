@@ -1,0 +1,78 @@
+﻿@model MulltiplaJML.Models.ApplicationUser
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@inject MulltiplaJML.Data.ApplicationDbContext Context
+@{
+
+    ApplicationUser appUser = await UserManager.GetUserAsync(User);
+
+}
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        @if (Model != null)
+        {
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="@Model.profilePictureUrl" class="img-circle profilePicture" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>@Model.Email</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+
+        }
+
+
+
+
+
+
+        @if (appUser != null)
+        {
+    <ul class="sidebar-menu" data-widget="tree">
+
+
+        <li class="header">Indicadores de Gestão</li>
+
+
+        @if (appUser.HomeRole)
+        {
+            <li class="@Html.IsSelected(controller: "Dashboard")">
+                <a href="@Url.Action("Index", "Dashboard")">
+                    <i class="fa fa-bar-chart"></i> <span>DF-e</span>
+                </a>
+            </li>
+        }
+
+        <li class="header">Documentos Fiscais</li>
+
+        <li class="@Html.IsSelected(controller: "eDfe")">
+            <a href="@Url.Action("Index", "eDfe")">
+                <i class="fa fa-star"></i> <span>MFD-e</span>
+
+            </a>
+        </li>
+
+
+        <li class="@Html.IsSelected(controller: "DocumentosFiscais")">
+            <a href="@Url.Action("Index", "DocumentosFiscais")">
+                <i class="fa fa-star"></i> <span>NF-e</span>
+
+            </a>
+        </li>
+
+       
+
+    </ul>
+
+            
+        }
+
+
+
+    </section>
+    <!-- /.sidebar -->
+</aside>

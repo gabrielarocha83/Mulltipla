@@ -1,0 +1,116 @@
+﻿@model IEnumerable<MulltiplaJML.Models.Invent.OrdemServico>
+
+@{
+    ViewData["Title"] = "Lista";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+    ViewData["EntityIcon"] = "fa fa-building";
+    ViewData["ListTitle"] = "Lista de Ordens Serviço";
+}
+<table class="table table-hover table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th></th>
+            <th> Estoque </th>
+            @*<th>
+            nº OS
+        </th>*@
+        <th>
+          OS/Pedido
+        </th>
+        <th>
+           Chave
+        </th>
+        <th>
+         Recebimento
+        </th>
+        <th>
+        Ordem Servico
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CodFornecedor)
+        </th>*@
+            <th>
+                Fornecedor
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+
+            <th>
+                Tipo OS
+            </th>
+            <th>
+                Total
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+            </td>
+
+            @* <td>
+            <a asp-action="Delete" asp-route-id="@item.Id"class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+        </td>*@
+            <td>@Html.DisplayFor(modelItem => item.NomeFilial)</td>
+            @*  <td>
+            @Html.DisplayFor(modelItem => item.NumeroOS)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChaveNF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataRecebimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataOS)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.CodFornecedor)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeFornecedor)
+            </td>
+            <td>
+                @if (item.Status == "P")
+                {
+                    <span class="label label-warning">Pendente</span>
+                }
+                @if (item.Status == "R")
+                {
+                    <span class="label label-success">Recebido</span>
+                }
+                @if (item.Status == "C")
+                {
+                    <span class="label label-default">Concluído</span>
+                }
+                @if (item.Status == "D")
+                {
+                    <span class="label label-warning">Devolvido</span>
+                }
+                @if (item.Status == "A")
+                {
+                    <span class="label label-info">Em Andamento</span>
+                }
+
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoOS)
+
+            </td>
+            <td>
+                R$ @Html.DisplayFor(modelItem => item.ValorTotal)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

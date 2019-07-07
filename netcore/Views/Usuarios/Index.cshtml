@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MulltiplaJML.Models.AccountViewModels.Usuarios>
+
+@{
+    ViewData["Title"] = "Cadastro de Usuarios";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+    ViewData["EntityIcon"] = "fa fa-building";
+}
+
+<div class="row">
+   
+    <div class="col-md-12">
+        <a asp-action="Create" class="btn btn-default">Novo</a>
+
+        <table class="table table-hover table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Login)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.CodMatriz)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CodFilial)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ativo)
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Login)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CodMatriz)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CodFilial)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ativo)
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

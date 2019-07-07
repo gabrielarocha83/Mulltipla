@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MulltiplaJML.Models.RM.CapexImport>
+
+@{
+    ViewData["Title"] = "Capex";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+<div class="col-xs-12">
+    <header class="panel_header">
+        <h2 class="title pull-left">Capex</h2>
+        <div class="actions panel_actions pull-right">
+            <a class="box_toggle fa fa-chevron-down"></a>
+            <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+            <a class="box_close fa fa-times"></a>
+        </div>
+    </header>
+</div>
+<div class="col-xs-12">
+  
+
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    @*<th></th>*@
+                    <th>
+                        Conta  Contábil
+                    </th>
+                    <th>
+                        Coligada
+                    </th>
+                    <th>
+                        Conta Gerencial
+                    </th>
+                    <th>
+                        Col. Gerencial
+                    </th>
+                    <th>
+                        Filial
+                    </th>
+                    <th>
+                        Centro  de Custo
+                    </th>
+                    <th>
+                        Departamento
+                    </th>
+                    <th>
+                        Ano
+                    </th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContaContabil)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Coligada)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContaGerencial)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ColigadaGerencial)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Filial)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CentroCusto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Departamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ano)
+                        </td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

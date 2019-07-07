@@ -1,0 +1,22 @@
+C:\Projetos\Projetos\JML\CoralCore\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.deps.json
+C:\Projetos\Projetos\JML\CoralCore\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.runtimeconfig.json
+C:\Projetos\Projetos\JML\CoralCore\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.runtimeconfig.dev.json
+C:\Projetos\Projetos\JML\CoralCore\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.dll
+C:\Projetos\Projetos\JML\CoralCore\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.pdb
+C:\Projetos\Projetos\JML\CoralCore\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.csprojAssemblyReference.cache
+C:\Projetos\Projetos\JML\CoralCore\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.csproj.CoreCompileInputs.cache
+C:\Projetos\Projetos\JML\CoralCore\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.AssemblyInfoInputs.cache
+C:\Projetos\Projetos\JML\CoralCore\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.AssemblyInfo.cs
+C:\Projetos\Projetos\JML\CoralCore\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.dll
+C:\Projetos\Projetos\JML\CoralCore\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.pdb
+F:\Fontes Claudio\JML\Mulltipla\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.deps.json
+F:\Fontes Claudio\JML\Mulltipla\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.runtimeconfig.json
+F:\Fontes Claudio\JML\Mulltipla\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.runtimeconfig.dev.json
+F:\Fontes Claudio\JML\Mulltipla\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.dll
+F:\Fontes Claudio\JML\Mulltipla\netcore\bin\Debug\netcoreapp2.0\MulltiplaJML.pdb
+F:\Fontes Claudio\JML\Mulltipla\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.csproj.CoreCompileInputs.cache
+F:\Fontes Claudio\JML\Mulltipla\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.AssemblyInfoInputs.cache
+F:\Fontes Claudio\JML\Mulltipla\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.AssemblyInfo.cs
+F:\Fontes Claudio\JML\Mulltipla\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.dll
+F:\Fontes Claudio\JML\Mulltipla\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.pdb
+F:\Fontes Claudio\JML\Mulltipla\netcore\obj\Debug\netcoreapp2.0\MulltiplaJML.csprojAssemblyReference.cache

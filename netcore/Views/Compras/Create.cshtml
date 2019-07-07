@@ -1,0 +1,316 @@
+﻿@model MulltiplaJML.Models.Compras
+
+@inject MulltiplaJML.Data.ApplicationDbContext Context
+@{
+    ViewData["Title"] = "Solicitacao de Compras";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+    ViewData["EntityIcon"] = "fa fa-bank";
+
+    MulltiplaJML.Models.ItensCompra compras = new ItensCompra();
+
+}
+
+<div class="col-xs-12">
+    <section class="box ">
+        <h2 class="title pull-left">Solicitação Compras</h2>
+        <header class="panel_header">
+
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+        <div class="content-body">
+
+            <form asp-action="Create">
+
+
+                <div class="row">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <!--  <form asp-action="Create">-->
+                    <div class="col-md-12">
+
+
+                        <div class="form-group col-md-3">
+                            <label asp-for="Empresa" class="control-label"></label>
+                            <select asp-for="Empresa" class="form-control" asp-items="ViewBag.Coligada"></select>
+                            <span asp-validation-for="Empresa" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+
+                            <label asp-for="Nome" class="control-label"></label>
+                            <input asp-for="Nome" class="form-control" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Departamento" class="control-label"></label>
+                            <input asp-for="Departamento" class="form-control" />
+                            <span asp-validation-for="Departamento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="CentroCusto" class="control-label"></label>
+                            <input asp-for="CentroCusto" class="form-control" />
+                            <span asp-validation-for="CentroCusto" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="Processo" class="control-label"></label>
+                            <input asp-for="Processo" class="form-control" value="Compras" />
+                            <span asp-validation-for="Processo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="DataSolicitacao" class="control-label"></label>
+                            <input asp-for="DataSolicitacao" class="form-control" />
+                            <span asp-validation-for="DataSolicitacao" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="Area" class="control-label"></label>
+                            <input asp-for="Area" class="form-control" />
+                            <span asp-validation-for="Area" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group col-md-2">
+
+                            <label asp-for="Cargo" class="control-label"></label>
+                            <input asp-for="Cargo" class="form-control" />
+                            <span asp-validation-for="Cargo" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group col-md-2">
+
+                            <label asp-for="PrazoEntrega" class="control-label"></label>
+                            <select asp-for="PrazoEntrega" class="form-control" asp-items="ViewBag.PrazoEntrega"></select>
+                            <span asp-validation-for="PrazoEntrega" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="Motivo" class="control-label"></label>
+                        <textarea asp-for="Motivo" class="form-control" style="height:100px; resize: none"></textarea>
+                        <span asp-validation-for="Motivo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <div class="form-group col-md-6">
+                            <label asp-for="Fornecedor" class="control-label"></label>
+                            <select asp-for="Fornecedor" class="form-control" asp-items="ViewBag.Fornecedor"></select>
+                            <span asp-validation-for="Fornecedor" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="Movimento" class="control-label"></label>
+                            <select asp-for="Movimento" class="form-control" asp-items="ViewBag.Movimento"></select>
+                            <span asp-validation-for="Movimento" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label asp-for="TipoServico" class="control-label"></label>
+                            <select asp-for="TipoServico" class="form-control" asp-items="ViewBag.TipoServico"></select>
+                            <span asp-validation-for="TipoServico" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="DataEntrega" class="control-label"></label>
+                            <input asp-for="DataEntrega" class="form-control" />
+                            <span asp-validation-for="DataEntrega" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label asp-for="CondicaoPagamento" class="control-label"></label>
+                            <select asp-for="CondicaoPagamento" class="form-control" asp-items="ViewBag.CondicaoPagamento"></select>
+
+                            <span asp-validation-for="CondicaoPagamento" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="form-group col-md-3">
+                            <label asp-for="DataVencimento" class="control-label"></label>
+                            <input asp-for="DataVencimento" class="form-control" />
+
+                            <span asp-validation-for="DataVencimento" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="form-group col-md-12">
+                        <br />     <br />
+                        <button type="submit" value="Salvar" class="btn btn-success">Salvar</button>
+                        <a asp-action="Index" class="btn btn-success">Voltar</a>
+                        @*<input type="submit" value="Aprovar" class="btn btn-info" />
+        <input type="submit" value="Enviar" class="btn btn-purple" />
+        <input type="submit" value="Cancelar" class="btn btn-danger" />
+        <input type="submit" value="Sair" class="btn btn-secondary" />*@
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- </form> -->
+
+
+            </form>
+            @*<div class="row">
+                <div class="col-md-12">
+                    <input asp-for="@Model.Id" class="form-control hidden Id " />
+                    <div class="form-group col-md-4">
+                        <label asp-for="@Model.itensCompras[0].CodProduto" class="control-label"></label>
+                        <select asp-for="@compras.CodProduto" class="form-control produto" asp-items="ViewBag.Produto"></select>
+                        <span asp-validation-for="@compras.CodProduto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label asp-for="@compras.Quantidade" class="control-label"></label>
+                        <input asp-for="@compras.Quantidade" class="form-control quantidade" />
+                        <span asp-validation-for="@compras.Quantidade" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label asp-for="@compras.UnidadeMedida" class="control-label"></label>
+                        <input asp-for="@compras.UnidadeMedida" class="form-control" />
+                        <span asp-validation-for="@compras.UnidadeMedida" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group col-md-2">
+                        <label asp-for="@compras.ValorUnitario" class="control-label"></label>
+                        <input asp-for="@compras.ValorUnitario" class="form-control" />
+                        <span asp-validation-for="@compras.ValorUnitario" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label asp-for="@compras.ValorTotal" class="control-label"></label>
+                        <input asp-for="@compras.ValorTotal" class="form-control" />
+                        <span asp-validation-for="@compras.ValorTotal" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="@compras.EspecificaçãoTecnica" class="control-label"></label>
+                        <input asp-for="@compras.EspecificaçãoTecnica" class="form-control" />
+                        <span asp-validation-for="@compras.EspecificaçãoTecnica" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input type="submit" value="Adicionar" class="btn btn-primary" onclick="SalvarItens()" />
+                    </div>
+                </div>
+
+            </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        Produto
+                                    </th>
+                                    <th>
+                                        Unidade
+                                    </th>
+                                    <th>
+                                        Quantidade
+                                    </th>
+                                    <th>
+                                        Valor
+                                    </th>
+                                    <th>
+                                        ValorTotal
+                                    </th>
+                                    <th>
+                                        Especificação Tecnica
+                                    </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.ItensCadastrados!=null)
+                                {
+                                @foreach (MulltiplaJML.Models.ItensCompra item in ViewBag.ItensCadastrados)
+                                {
+                                <tr>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Produto)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.UnidadeMedida)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Quantidade)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ValorUnitario)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ValorTotal)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.EspecificaçãoTecnica)
+                                    </td>
+
+                                </tr>
+                                }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            <div class="row">
+                <br />     <br />
+                <div class="form-group col-md-3">
+                    <label asp-for="Tributos" class="control-label"></label>
+                    <input asp-for="Tributos" class="form-control" />
+
+                    <span asp-validation-for="Tributos" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group col-md-3">
+                    <label asp-for="TotalGeral" class="control-label"></label>
+                    <input asp-for="TotalGeral" class="form-control" />
+
+                    <span asp-validation-for="TotalGeral" class="text-danger"></span>
+                </div>
+            </div>*@
+        </div>
+
+    </section>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+
+    function SalvarItens() {
+        debugger;
+        var produto = document.getElementsByClassName('produto')
+        var quantidade = document.getElementsByClassName('quantidade')
+     var Id = document.getElementsByClassName('Id')
+        $.ajax({
+            url: '/Compras/SalvarItens/',
+            dataType: 'json',
+            type: 'POST',
+            data: { 'produto': produto[0].value, 'quantidade': quantidade[0].value , 'Id' :Id[0].value },
+            success: function (data) {
+                toastr.success("Operação Realizada com Sucesso");
+
+            }
+        });
+       
+    }
+
+</script>
+
+@*@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@

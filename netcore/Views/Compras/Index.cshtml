@@ -1,0 +1,168 @@
+﻿@model IEnumerable<MulltiplaJML.Models.Compras>
+
+@{
+    ViewData["Title"] = "Workflow de Aprovação";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+    <div class="col-xs-12">
+        <header class="panel_header">
+            <h2 class="title pull-left">Workflow de Aprovação</h2>
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+        </div>
+    <div class="col-xs-12">
+        <br />
+        <div class="row">
+            <div class="col-lg-3 col-xs-3">
+                <a asp-action="Create" class="btn btn-success">Nova Solicitação</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h4><strong>1000</strong></h4>
+                        <span>Total Solicitações</span>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h4><strong>200</strong></h4>
+                        <span>Em Andamento</span>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        <h4><strong>200</strong></h4>
+                        <span>Concluidas</span>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-3">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h4><strong>600</strong></h4>
+                        <span>Pendentes</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ./col -->
+        </div>
+    </div>
+        <div class="col-xs-12">
+            <section class="box ">
+                <header class="panel_header">
+
+                    <div class="actions panel_actions pull-right">
+                        <a class="box_toggle fa fa-chevron-down"></a>
+                        <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                        <a class="box_close fa fa-times"></a>
+                    </div>
+                </header>
+                <div class="content-body">
+
+                    <div class="row">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        Nfe
+                                    </th>
+                                    <th>
+                                        Progresso
+                                    </th>
+                                    <th>
+                                        Descricao
+                                    </th>
+                                    <th>
+                                        Solicitação
+                                    </th>
+                                    <th>
+                                        Processo
+                                    </th>
+                                    <th>
+                                        Solicitante
+                                    </th>
+                                    <th>
+                                        Criação
+                                    </th>
+                                    <th>
+                                        Aprovação
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+
+                                    <td>  <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-xs"><i class="fa fa-list"></i></a></td>
+                                    <td>
+                                        @if (item.Status == "Pendente")
+                                        {<span class="label label-warning">@Html.DisplayFor(modelItem => item.Status)</span>}
+                                        @if (item.Status == "Em Aprovação")
+                                        {<span class="label label-info">@Html.DisplayFor(modelItem => item.Status)</span>}
+                                        @if (item.Status == "Aprovado")
+                                        {<span class="label label-success">@Html.DisplayFor(modelItem => item.Status)</span>}
+                                    </td>
+                                    <td>
+                                        <span class="label label-warning">
+                                            Pendente
+                                        </span>
+                                    </td>
+                                    <td>Worflow</td>
+
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.tipoCompras)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td>
+                                       Compras
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nome)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DataSolicitacao)
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+

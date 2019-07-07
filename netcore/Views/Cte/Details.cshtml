@@ -1,0 +1,333 @@
+﻿@model MulltiplaJML.Models.XML.GDXMLCTE
+
+
+@{
+    ViewData["Title"] = "Notas - Detalhes";
+    Layout = "~/Views/Shared/_AdminlteNetcoreDetails.cshtml";
+    ViewData["EntityIcon"] = "fa fa-bank";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Default box -->
+        <div class="box box-primary">
+            <div class="box-body">
+                <div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.chCte)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.chCte)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.cUF)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.cUF)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.cCT)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.cCT)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.natOp)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.natOp)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.forPag)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.forPag)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.mod)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.mod)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.serie)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.serie)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nCT)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.nCT)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.dhEmi)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.dhEmi)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tpImp)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.tpImp)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tpEmis)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.tpEmis)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.cDV)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.cDV)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tpAmb)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.tpAmb)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tpCTe)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.tpCTe)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.procEmi)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.procEmi)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.verProc)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.verProc)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.cMunEnv)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.cMunEnv)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.xMunEnv)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.xMunEnv)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.UFEnv)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.UFEnv)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.modal)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.modal)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.tpServ)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.tpServ)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.cMunIni)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.cMunIni)
+                        </dd>
+                        @*<dt>
+                                @Html.DisplayNameFor(model => model.xml)
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.xml)
+                            </dd>*@
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CST)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CST)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.vBC)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.vBC)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.pICMS)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.pICMS)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.vICMS)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.vICMS)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Integrado)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Integrado)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Emitente)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Emitente)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Remetente)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Remetente)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Destinatario)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.Destinatario)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.vTPrest)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.vTPrest)
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <a asp-action="Index" class="btn btn-primary">Voltar</a>
+                    <a asp-action="Download" class="btn btn-primary">Donwload XML</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-body">
+                <div>
+                    <table class="table table-hover table-stripeds">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    Chave
+                                </th>
+                                <th>
+                                    Integrado
+                                </th>
+                                <th> Pedidos</th>
+
+
+                                <th>
+                                    Série
+                                </th>
+                                <th>
+                                    Nº Nota
+                                </th>
+                                <th>
+                                    Dt. Emissão
+                                </th>
+
+
+
+
+                                <th>
+                                    Valor Total
+                                </th>
+
+                                @*<th>
+                                        Info.
+                                    </th>*@
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Nfe)
+                            {
+
+
+                                <tr>
+                                    <td>
+                                        @*<a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |*@
+                                        <a asp-action="Details" asp-controller="DocumentosFiscais" asp-route-id="@item.ID">Detalhes</a>
+                                        @*<a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
+                                    </td>
+                                    <td>
+                                        @*<input value="@item.CHAVE" type="checkbox" />*@
+                                        @Html.DisplayFor(modelItem => item.CHAVE)
+                                    </td>
+                                    <td>
+                                        @if (item.GDXML.INTEGRADO == 0)
+                                            {
+                                                <span class="label label-warning">Não</span>
+
+                                            }
+                                            else
+                                            {
+                                                <span class="label label-success">Sim</span>
+                                            }
+                                    </td>
+
+
+                                    <td>
+                                        @if (item.GDXML.IDMOV > 0)
+                                            {
+                                                @Html.DisplayFor(modelItem => item.GDXML.IDMOV)
+                                            }
+                                            else
+                                            {
+                                                <span class="label label-warning">Não Integrado</span>
+
+                                            }
+                                    </td>
+
+
+
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SERIE)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NNF)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DEMI)
+                                    </td>
+
+
+                                    <td>
+                                        R$ @Html.DisplayFor(modelItem => item.VNF)
+                                    </td>
+                                    @*<td>
+                                            @Html.DisplayFor(modelItem => item.INFCPL)
+                                        </td>*@
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

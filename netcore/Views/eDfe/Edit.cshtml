@@ -1,0 +1,101 @@
+﻿@model MulltiplaJML.Models.DFe.ResNFe
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminlteNetcoreEdit.cshtml";
+    ViewData["ListTitle"] = "Manifestação do Destinatário";
+    ViewData["EditInfo"] = "Regra de Geral de Prazos para Manifestação do Destinatário. Como regra geral, os eventos poderão ser registrados em até 90(noventa) dias contados a partir da data de autorização da NF-e.P";
+
+}
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group col-md-4">
+                <label asp-for="ChNFe" class="control-label"></label>
+                <input asp-for="ChNFe" class="form-control" disabled />
+                <span asp-validation-for="ChNFe" class="text-danger"></span>
+            </div>
+
+            @*<div class="form-group col-md-4">
+                    <label asp-for="CPF" class="control-label"></label>
+                    <input asp-for="CPF" class="form-control" disabled/>
+                    <span asp-validation-for="CPF" class="text-danger"></span>
+                </div>*@
+            <div class="form-group col-md-4">
+                <label asp-for="XNome" class="control-label"></label>
+                <input asp-for="XNome" class="form-control" disabled />
+            </div>
+
+            <div class="form-group col-md-4">
+                <label asp-for="DhEmi" class="control-label"></label>
+                <input asp-for="DhEmi" class="form-control" disabled />
+            </div>
+            @*<div class="form-group col-md-4">
+                    <label asp-for="TpNF" class="control-label"></label>
+                    <input asp-for="TpNF" class="form-control"  disabled/>
+                </div>*@
+            <div class="form-group col-md-4">
+                <label asp-for="VNF" class="control-label"></label>
+                <span asp-validation-for="XNome" class="text-danger"></span>
+                <input asp-for="VNF" class="form-control" disabled />
+            </div>
+            @*<div class="form-group col-md-4">
+                    <label asp-for="DigVal" class="control-label"></label>
+                    <input asp-for="DigVal" class="form-control" disabled/>
+                    <span asp-validation-for="DigVal" class="text-danger" ></span>
+                </div>*@
+            @*<div class="form-group col-md-4">
+                    <label asp-for="DhRecbTo" class="control-label"></label>
+                    <input asp-for="DhRecbTo" class="form-control" disabled/>
+                    <span asp-validation-for="DhRecbTo" class="text-danger" ></span>
+                </div>*@
+            @*<div class="form-group col-md-4">
+                    <label asp-for="NProt" class="control-label"></label>
+                    <input asp-for="NProt" class="form-control" disabled/>
+                    <span asp-validation-for="NProt" class="text-danger" ></span>
+                </div>*@
+            <div class="form-group col-md-4">
+                <label asp-for="CSitNFe" class="control-label"></label>
+                <input asp-for="CSitNFe" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="CnpjTomador" class="control-label"></label>
+                <input asp-for="CnpjTomador" class="form-control" disabled />
+            </div>
+
+            <div class="form-group col-md-4">
+                <label asp-for="DataManifestacao" class="control-label"></label>
+                <input asp-for="DataManifestacao" class="form-control" disabled />
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="NSU" class="control-label"></label>
+                <input asp-for="NSU" class="form-control" disabled />
+            </div>
+
+            <div class="form-group col-md-4">
+                <label asp-for="TipoEvento" class="control-label"></label>
+                @*<input asp-for="TipoEvento" class="form-control" />
+                    <span asp-validation-for="TipoEvento" class="text-danger"></span>*@
+
+                <select asp-for="TipoEvento" class="form-control">
+                    <option value="210200">Confirmacao da Operacao</option>
+                    <option value="210210">Ciencia da Operacao</option>
+                    <option value="210220">Desconhecimento da Operacao</option>
+                    <option value="210240">Operacao nao Realizada</option>
+                </select>
+                <span asp-validation-for="TipoEvento" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+
+        </form>
+        <div class="form-group col-md-12 label-success">
+            @ViewBag.Mensagem
+        </div>
+    </div>
+</div>

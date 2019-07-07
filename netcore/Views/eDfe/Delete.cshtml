@@ -1,0 +1,124 @@
+﻿@model MulltiplaJML.Models.DFe.ResNFe
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_AdminlteMulltiplaJML.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ResNFe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ChNFe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChNFe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.XNome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.XNome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IE)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DhEmi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DhEmi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TpNF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TpNF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VNF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VNF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DigVal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DigVal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DhRecbTo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DhRecbTo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NProt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NProt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CSitNFe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CSitNFe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CnpjTomador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CnpjTomador)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Manifesta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Manifesta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataManifestacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataManifestacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NSU)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NSU)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.createdAt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.createdAt)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

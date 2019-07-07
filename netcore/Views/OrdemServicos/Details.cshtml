@@ -1,0 +1,85 @@
+﻿@model MulltiplaJML.Models.Invent.OrdemServico
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminlteNetcore.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrdemServico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroOS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumeroOS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPedido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPedido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ChaveNF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChaveNF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataRecebimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataRecebimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataOS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataOS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CodFornecedor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodFornecedor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFornecedor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeFornecedor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoRecebimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoRecebimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

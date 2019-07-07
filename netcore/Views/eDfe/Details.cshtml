@@ -1,0 +1,116 @@
+﻿@model MulltiplaJML.Models.DFe.ResNFe
+
+@{
+    ViewData["Title"] = "Notas - Detalhes";
+    Layout = "~/Views/Shared/_AdminlteNetcoreDetails.cshtml";
+    ViewData["EntityIcon"] = "fa fa-bank";
+}
+
+
+<div class="row">
+    <div class="col-md-9">
+        <!-- Default box -->
+        <div class="box box-primary">
+            <div class="box-body">
+                <div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Chave
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ChNFe)
+                        </dd>
+                        <dt>
+                            CNPJ
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CNPJ)
+                        </dd>
+                        <dt>
+                            CPF
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CPF)
+                        </dd>
+                        <dt>
+                            Cliente
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.XNome)
+                        </dd>
+                        <dt>
+                            Inscrição Estadual
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.IE)
+                        </dd>
+                        <dt>
+                            Data Emissão
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.DhEmi)
+                        </dd>
+                        <dt>
+                            Tipo de Nota Fiscal
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TpNF)
+                        </dd>
+                        <dt>
+                            Valor da Nota
+                        </dt>
+                        <dd>
+                            R$  @Html.DisplayFor(model => model.VNF)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DigVal)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.DigVal)
+                        </dd>
+                        <dt>
+                            Data Recebimento
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.DhRecbTo)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.NProt)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.NProt)
+                        </dd>
+                        <dt>
+                            Situação NFe
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CSitNFe)
+                        </dd>
+                        <dt>
+                            Tomador
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CnpjTomador)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Manifesta)
+                        </dt>
+
+                        <dt>
+                            NSU
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.NSU)
+                        </dd>
+
+                    </dl>
+                </div>
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+
+
+</div>

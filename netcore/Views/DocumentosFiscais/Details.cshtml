@@ -1,0 +1,334 @@
+﻿@model MulltiplaJML.Models.XML.GDXMLHEADER
+
+
+@{
+    ViewData["Title"] = "Notas - Detalhes";
+    Layout = "~/Views/Shared/_AdminlteNetcoreDetails.cshtml";
+    ViewData["EntityIcon"] = "fa fa-bank";
+}
+
+
+<div class="row">
+    <div class="col-md-9">
+        <!-- Default box -->
+        <div class="box box-primary">
+            <div class="box-body">
+                <div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Chave
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CHAVE)
+                        </dd>
+                        <dt>
+                            UF @Html.DisplayNameFor(model => model.CUF)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CUF)
+                        </dd>
+                        <dt>
+                            Codigo Nota
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CNF)
+                        </dd>
+                        <dt>
+                            Natureza Operação
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.NATOP)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.INDPAG)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.INDPAG)
+                        </dd>
+                        <dt>
+                            Modalidade
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.MOD)
+                        </dd>
+                        <dt>
+                            Série
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.SERIE)
+                        </dd>
+                        <dt>
+                            Nº Nota
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.NNF)
+                        </dd>
+                        <dt>
+                            Data Emissão
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.DEMI)
+                        </dd>
+                        @*<dt>
+                    @Html.DisplayNameFor(model => model.DSAIENT)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DSAIENT)
+                </dd>*@
+                        @*<dt>
+                    @Html.DisplayNameFor(model => model.HSAIENT)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.HSAIENT)
+                </dd>*@
+                        <dt>
+                            Tipo Nota
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TPNF)
+                        </dd>
+                        <dt>
+                            Código Municipal
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CMUNFG)
+                        </dd>
+                        <dt>
+                            Tipo Imposto
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TPIMP)
+                        </dd>
+                        <dt>
+                            Tipo Emissão
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TPEMIS)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CDV)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CDV)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.TPAMB)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.TPAMB)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FINNFE)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.FINNFE)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PROCEMI)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.PROCEMI)
+                        </dd>
+                        <dt>
+                            Versão
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VERPROC)
+                        </dd>
+                        <dt>
+                            Emitente
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CNPJEMITENTE)
+                        </dd>
+                        <dt>
+                            Destinatário
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.CNPJDESTINATARIO)
+                        </dd>
+                        <dt>
+                            Data Vencimento
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.DVENC)
+                        </dd>
+                        <dt>
+                            Info.
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.INFCPL)
+                        </dd>
+                        <dt>
+                            Valor
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VBC)
+                        </dd>
+                        <dt>
+                            Icms
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VICMS)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VBCST)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VBCST)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VST)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VST)
+                        </dd>
+                        <dt>
+                            Valor Produto
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VPROD)
+                        </dd>
+                        <dt>
+                            Valor Frete
+                        </dt>
+                        <dd>
+                            Valor Seguro
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VSEG)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VSEG)
+                        </dd>
+                        <dt>
+                            Valor Desconto
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VDESC)
+                        </dd>
+                        @*<dt>
+                    @Html.DisplayNameFor(model => model.VII)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.VII)
+                </dd>*@
+                        <dt>
+                            IPI
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VIPI)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VPIS)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VPIS)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.VCOFINS)
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VCOFINS)
+                        </dd>
+                        <dt>
+                            Valor Outro
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VOUTRO)
+                        </dd>
+                        <dt>
+                            Valor Nota
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VNF)
+                        </dd>
+                        <dt>
+                            Vl. T. tributação
+                        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.VTOTTRIB)
+                        </dd>
+                    </dl>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                Código
+                            </th>
+                            <th>
+                                Descrição
+                            </th>
+                            <th>
+                                NCM
+                            </th>
+                            <th>
+                                CFOP
+                            </th>
+                            <th>
+                                Unidade
+                            </th>
+                            <th>
+                                Quantidade
+                            </th>
+                            <th>
+                                Vl. Unid
+                            </th>
+                            <th>
+                                Vl. Total
+                            </th>
+
+                            @*<th></th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewData["ItensXML"] as List<MulltiplaJML.Models.XML.GDXMLITENS>)
+
+
+                        {
+                            <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CPROD)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.XPROD)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NCM)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CFOP)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.UCOM)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.QCOM)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.VUNCOM)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.VPROD)
+                                </td>
+
+                                @*<td>
+
+                            <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                        </td>*@
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <br />
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
+            </div>
+           
+        </div>
+    </div>
+</div>

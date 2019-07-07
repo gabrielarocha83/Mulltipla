@@ -1,0 +1,109 @@
+﻿@model IEnumerable<MulltiplaJML.Models.XML.GDXMLCTE>
+
+
+@{
+    ViewData["Title"] = "Doc. Fiscais CTE - Principal";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+    ViewData["EntityIcon"] = "fa fa-bank";
+    ViewData["ListTitle"] = "Lista de Notas Recebidas";
+    //ViewData["IndexInfo"] = "O cliente é uma organização que compra produtos da sua empresa. Você vende produtos para eles.";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Arquivo</th>
+            <th>
+                Chave
+            </th>
+            <th>
+                Status
+            </th>
+            <th>Pedidos</th>
+            <th>
+                N Cte
+            </th>
+            <th>
+                Nat. Operação
+            </th>
+
+
+            <th>
+                Dt.Emissão
+            </th>
+
+           
+            <th>
+                Emitente
+            </th>
+
+            <th>
+                Destinatárop
+            </th>
+            <th>
+                Valor
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.id">Detalhes</a>
+            </td>
+            <td>@Html.ActionLink("Download", "Download", new { id = item.chCte })</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.chCte)
+                
+
+            </td>
+            <td>
+                @if (item.Integrado == 0 || item.Integrado == null)
+                {
+                    <span class="label label-warning">Pendente </span>
+
+                }
+                @if (item.Integrado == 1)
+                {
+                    <span class="label label-success">Integrado ERP</span>
+                }
+            </td>
+            <td>
+                @if (item.Integrado > 0)
+                {
+                    @Html.DisplayFor(modelItem => item.ctenfe[0].Idmov)
+                }
+                else
+                {
+                    <select asp-for="@item.Pedidos" name="Pedidos" class="form-control select2" asp-items="@(new SelectList(@item.Pedidos, "Id", "VALOR"))">Pedidos</select>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cCT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.natOp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dhEmi)
+            </td>
+
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.Emitente)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Destinatario)
+            </td>
+            <td>
+                R$   @Html.DisplayFor(modelItem => item.vTPrest)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

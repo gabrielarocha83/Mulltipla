@@ -1,0 +1,138 @@
+﻿@model IEnumerable<MulltiplaJML.Models.Compras>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cargo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Area)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CentroCusto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Empresa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoProduto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoServico)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Departamento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Processo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataSolicitacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Motivo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fornecedor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tributos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalGeral)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataEntrega)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataVencimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CondicaoPagamento)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CentroCusto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoServico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Processo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataSolicitacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fornecedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tributos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalGeral)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Movimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEntrega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataVencimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CondicaoPagamento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

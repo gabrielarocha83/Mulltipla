@@ -1,0 +1,187 @@
+﻿@model MulltiplaJML.Models.Pagamento
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pagamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipodeSolicitacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipodeSolicitacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vencimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vencimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipodeMovimentação)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipodeMovimentação)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FormadePagto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FormadePagto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPFCNPJ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPFCNPJ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CondicaodePgto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CondicaodePgto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdeParc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QtdeParc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumLotePedido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumLotePedido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumNF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumNF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmissaoNF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmissaoNF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContaContabil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContaContabil)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reembolsável)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reembolsável)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AtivaçãoBem)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AtivaçãoBem)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriçãoPagto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DescriçãoPagto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NPatrimônio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NPatrimônio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NSérie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NSérie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtde)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtde)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorUnitario)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AprovadoGestor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AprovadoGestor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MotivoAprovGestor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MotivoAprovGestor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AprovadoDiretor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AprovadoDiretor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MotivoAprovDiretor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MotivoAprovDiretor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AprovadoPresidente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AprovadoPresidente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MotivoAprovPresidente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MotivoAprovPresidente)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

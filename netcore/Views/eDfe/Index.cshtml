@@ -1,0 +1,106 @@
+﻿@model IEnumerable<MulltiplaJML.Models.DFe.ResNFe>
+
+@{
+    ViewData["Title"] = "Notas - Principal";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+    ViewData["EntityIcon"] = "fa fa-bank";
+    ViewData["ListTitle"] = "Lista de Notas Recebidas";
+    //ViewData["IndexInfo"] = "O cliente é uma organização que compra produtos da sua empresa. Você vende produtos para eles.";
+}
+
+<table class="table table-hover table-stripeds">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                Chave
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CNPJ)
+            </th>
+
+            <th>
+                Cliente
+            </th>
+            <th>
+                Valor Nota
+            </th>
+            <th>
+                Dt. Emissão
+            </th>
+            <th>
+                Manifestação
+            </th>
+
+
+            <th>
+                Evento
+            </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <div class="tools">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary btn-xs"><i class="fa fa-list"></i></a>
+                    </div>
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ChNFe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CNPJ)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.XNome)
+                </td>
+                <td>
+                    R$  @Html.DisplayFor(modelItem => item.VNF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DhEmi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataManifestacao)
+                </td>
+
+
+                <td>
+
+                    @if (item.TipoEvento == "210200")
+                    {
+                        <span class="label label-success">
+                            Confirmacao da Operação
+                        </span>
+                    }
+                    @if (item.TipoEvento == "210210")
+                    {
+                        <span class="label label-success">
+                            Ciencia da Operacao
+                        </span>
+                    }
+                    @if (item.TipoEvento == "210220")
+                    {
+                        <span class="label label-warning">
+                            Desconhecimento da Operacao
+                        </span>
+                    }
+                    @if (item.TipoEvento == "210240")
+                    {
+                        <span class="label label-danger">
+                            Operacao nao Realizada
+                        </span>
+                    }
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

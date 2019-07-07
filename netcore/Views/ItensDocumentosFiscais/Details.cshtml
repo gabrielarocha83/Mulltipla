@@ -1,0 +1,199 @@
+﻿@model MulltiplaJML.Models.XML.GDXMLITENS
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminlteMulltiplaJML.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GDXMLITENS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CHNFE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CHNFE)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VERAPLIC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VERAPLIC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPROD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPROD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.XPROD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.XPROD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NCM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NCM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CFOP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CFOP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UCOM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UCOM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QCOM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QCOM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VUNCOM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VUNCOM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VPROD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VPROD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEANTRIB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEANTRIB)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UTRIB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UTRIB)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QTRIB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QTRIB)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VUNTRIB)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VUNTRIB)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.INDTOT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.INDTOT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEAN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEAN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ICMS_ORI)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ICMS_ORI)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ICMS_CST)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ICMS_CST)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ICMS_VBCSTRET)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ICMS_VBCSTRET)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ICMS_VICMSSTRETI)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ICMS_VICMSSTRETI)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IPI_CENQ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IPI_CENQ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IPI_CST)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IPI_CST)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PIS_CST)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PIS_CST)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PIS_VBC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PIS_VBC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PIS_PPIS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PIS_PPIS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PIS_VPIS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PIS_VPIS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COFINS_CST)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COFINS_CST)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COFINS_VBC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COFINS_VBC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COFINS_PCOFINS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COFINS_PCOFINS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COFINS_VCOFINS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COFINS_VCOFINS)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

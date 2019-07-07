@@ -1,0 +1,56 @@
+﻿@model MulltiplaJML.Models.AccountViewModels.Usuarios
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminlteNetcoreEdit.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group col-md-4">
+                <label asp-for="Login" class="control-label"></label>
+                <input asp-for="Login" class="form-control" />
+                <span asp-validation-for="Login" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="CodMatriz" class="control-label"></label>
+                <select asp-for="CodMatriz" class="form-control">
+                    <option value="1">CORAL CONSTRUTORA</option>
+                    <option value="2">CONSORCIO CORAL COPA</option>
+
+                </select>
+                <span asp-validation-for="CodMatriz" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="CodFilial" class="control-label"></label>
+                <select asp-for="CodFilial" class="form-control">
+                    <option value="1">CORAL CONSTRUTORA</option>
+                    <option value="2">CORAL SCP</option>
+                    <option value="1">CONSORCIO CORAL COPA</option>
+
+
+                </select>
+                <span asp-validation-for="CodFilial" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="Ativo" class="control-label"></label>
+                <input asp-for="Ativo" class="form-control" />
+                <span asp-validation-for="Ativo" class="text-danger"></span>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

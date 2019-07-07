@@ -1,0 +1,70 @@
+﻿@model MulltiplaJML.Models.ItensCompra
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_AdminlteNetcoreIndex2.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ItensCompra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCompras)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdCompras)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnidadeMedida)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnidadeMedida)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CodProduto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodProduto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorUnitario)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EspecificaçãoTecnica)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EspecificaçãoTecnica)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
